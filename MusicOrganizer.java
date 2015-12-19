@@ -59,4 +59,13 @@ public class MusicOrganizer
             files.remove(index);
         }
     }
+    
+    /**
+     * Metodo que comprueba si el indice introducido por parametro es valido.
+     */
+    public void checkIndex(int indiceElegido){
+        if(indiceElegido < 0 || indiceElegido > getNumberOfFiles()){
+            System.out.println("El indice elegido es incorrecto, tiene que estar entre 0 y " + files.size());
+        }
+    }
 }
